@@ -1,0 +1,74 @@
+Instruções para executar a API
+
+Link do Repositório GitHub:
+
+Tecnologias utilizadas
+
+O projeto utiliza as seguintes tecnologias:
+
+Linguagem de programação: Python 3.10
+
+Banco de dados: SQLite
+
+1. Ativar o ambiente virtual
+
+Primeiramente, verifique se o ambiente virtual está ativo.
+
+Para verificar, abra o terminal da sua IDE. No início da linha do terminal, deverá aparecer o nome do ambiente virtual, geralmente .venv. Caso o nome apareça, significa que o ambiente virtual está ativo.
+
+Se o ambiente virtual não estiver ativo, siga os passos abaixo de acordo com o seu sistema operacional.
+
+Windows
+
+No terminal da IDE, execute:
+
+python -m venv venv
+venv\Scripts\activate
+
+Linux/macOS
+
+No terminal da IDE, execute:
+
+python3 -m venv venv
+source venv/bin/activate
+
+2. Instalar as dependências
+
+Com o ambiente virtual ativo, instale as dependências do projeto executando o seguinte comando no terminal:
+
+pip install -r requirements.txt
+
+3. Executar a API
+
+Após a instalação das dependências, execute a API com o seguinte comando:
+
+uvicorn main:app --reload
+
+
+Após executar o comando, a API estará disponível localmente.
+
+Em seguida, abra o navegador de sua preferência e acesse:
+
+http://127.0.0.1:8000/docs
+
+Essa página abrirá a página interativa da API, onde será possível testar os endpoints.
+
+4. Testar a API
+
+Para testar a API, siga a ordem do fluxo apresentada na página interativa da API:
+
+- Cadastrar usuário: utilize o endpoint POST /usuarios/.
+
+- Gerar token (login): utilize o endpoint POST /token, informando o e-mail no campo username e a senha no campo password.
+
+- Autenticar no Swagger: clique no botão "Authorize" (ícone de cadeado no topo da página do Swagger) e informe o e-mail no campo username e a senha no campo password.
+
+- Cadastrar produto: utilize o endpoint POST /produtos/.
+
+- Criar unidade: utilize o endpoint POST /unidades/.
+
+- Criar estoque: utilize o endpoint POST /estoque/.
+
+- Criar pedido: utilize o endpoint POST /pedidos/.
+
+- Consultar e manipular pedidos: teste a consulta de pedidos utilizando GET /pedidos/, a busca de pedidos por canal utilizando GET /pedidos/canal/{canal} e, se necessário, utilize os endpoints disponíveis para exclusão.
