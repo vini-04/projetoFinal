@@ -1,12 +1,10 @@
-Instruções para executar a API
-
-- Tecnologias utilizadas
-
-O projeto utiliza as seguintes tecnologias:
+- Tecnologias utilizadas:
 
 Linguagem de programação: Python 3.10
 
 Banco de dados: SQLite
+
+- Instruções para executar a API:
 
 1. Ativar o ambiente virtual
 
